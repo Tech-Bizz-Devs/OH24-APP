@@ -68,12 +68,44 @@ You've successfully run and modified your React Native App. :partying_face:
 
 If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
 
-To learn more about React Native, take a look at the following resources:
+# User Authentication in React Native App
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Task Description
+This React Native mobile application implements user authentication functionality to ensure secure access and data protection. Users can register, log in, and log out securely, with proper error handling and validation.
+
+## Requirements
+Mobile and laptop must be connected with same network
+
+### React Native Framework
+- Utilize React Native's authentication components or third-party authentication libraries for user authentication.
+- Implement user registration, login, and logout functionality securely.
+
+### Security
+- Implement measures to prevent common security vulnerabilities such as CSRF (Cross-Site Request Forgery) and XSS (Cross-Site Scripting).
+- Store user credentials securely using encryption algorithms or secure storage mechanisms.
+
+## Implementation Details
+
+### Authentication Components
+This app utilizes React Native's built-in authentication components for user registration, login, and logout. Additionally, it integrates third-party libraries such as Firebase Authentication for enhanced security features.
+
+### Security Measures
+- CSRF Protection: Implemented CSRF tokens to prevent Cross-Site Request Forgery attacks. Tokens are generated per session and validated with each request.
+- XSS Prevention: Sanitized user input and escaped output to prevent Cross-Site Scripting attacks.
+- Secure Storage: User credentials are stored securely using encryption algorithms provided by the React Native framework or third-party libraries like AsyncStorage.
+
+## Installation
+1. Clone the repository: git clone <repository-url>
+2. Navigate to the project directory: cd react-native-authentication-app
+3. Install dependencies: npm install or yarn install
+
+## Usage
+1. Start the development server: npm start or yarn start
+2. Open the app on your Android or iOS device using Expo or run it on an emulator/simulator.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or features you'd like to add.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
