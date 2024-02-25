@@ -1,4 +1,4 @@
-# qr-reader-app
+# DebugQR
 this app is built in react native to read qr and bar code
 # QR Code Scanner React Native Application
 
