@@ -1,3 +1,4 @@
+import 'package:easyscan/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -50,7 +51,10 @@ class _DetailScreenState extends State<DetailScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const QrCodeScanner()),
+            );
           },
         ),
         backgroundColor: Colors.orangeAccent,
@@ -58,12 +62,19 @@ class _DetailScreenState extends State<DetailScreen> {
       body: Container(
         margin: const EdgeInsets.only(top: 40),
         child: Column(
-          
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Text("Scan Result:", style: Theme.of(context).textTheme.headline6),
             Center(
               child: Image.asset('assets/icon.png'),
+            ),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  child: Text("Scan Result: ${widget.qrResult}",
+                      style: Theme.of(context).textTheme.bodySmall),
+                ),
+              ],
             ),
             Visibility(
                 visible: isCopied,
@@ -75,11 +86,9 @@ class _DetailScreenState extends State<DetailScreen> {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 15),
               child: Row(children: [
-              
                 Expanded(
                   // Add this if you want equal width buttons
                   child: ElevatedButton(
-                    
                     onPressed: _copyToClipboard,
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
