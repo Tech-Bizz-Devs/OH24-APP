@@ -1,3 +1,4 @@
+![DebugQR](https://github.com/anishsharma47/OH24-APP/assets/91785746/d0f8cb89-8668-4f7f-bdf0-f9b2301a299e)
 # DebugQR
 this app is built in react native to read qr and bar code
 # QR Code Scanner React Native Application
