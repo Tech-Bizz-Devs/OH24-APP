@@ -1,2 +1,2 @@
-# OH24-APP
-OpenHack 2024 APP Projects
+# qr-reader-app
+this app is built in react native to read qr and bar code
